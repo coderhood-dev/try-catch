@@ -4,8 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Image,Flex } from "@chakra-ui/react";
 // Import Swiper styles
 import "swiper/swiper.scss";
-import logo from "../Images/logo.jpg"
-import Bauto from "../Images/Bauto.png"
+import promo from "../Images/promo.jpg"
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
@@ -48,7 +47,7 @@ export default function SliderHome () {
             // objectFit="cover"
             height="100%"
             width="100%"
-             src={Bauto}/>
+             src={promo}/>
             </Flex>
           </SwiperSlide>
         ))}
