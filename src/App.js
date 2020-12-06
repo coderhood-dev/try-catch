@@ -1,4 +1,5 @@
 import SliderHome from "./Components/SliderHome"
+// import Slider1 from "./Components/Slider1"
 
 function App() {
   return (
