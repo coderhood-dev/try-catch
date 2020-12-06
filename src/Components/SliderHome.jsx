@@ -1,8 +1,7 @@
 import React from "react";
 import SwiperCore, { Navigation, Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Box, Image, Flex } from "@chakra-ui/react";
-import "../Css/style.css";
+import { Box, Image,Center } from "@chakra-ui/react";
 import "swiper/swiper.scss";
 import promo from "../Images/promo.jpg";
 import "swiper/components/navigation/navigation.scss";
@@ -25,7 +24,7 @@ const data = [
 
 export default function SliderHome() {
   return (
-    <Box w="100%" h="30%">
+    <Box w="100%" h="30%" overflow="hidden">
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
@@ -37,15 +36,19 @@ export default function SliderHome() {
       >
         {data.map((user) => (
           <SwiperSlide>
-            <Flex
-              h="100%"
+            <Center
+              h="50vh"
               w="100%"
               justifyContent="center"
               alignItems="center"
               overflow="hidden"
             >
-              <Image h="35rem" w="100%" src={promo} />
-            </Flex>
+              <Image h="26rem" w="100%" src={promo}
+              objectFit="cover"
+              display="block"
+              margin="auto"
+              />
+            </Center>
           </SwiperSlide>
         ))}
       </Swiper>
