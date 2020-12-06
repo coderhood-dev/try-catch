@@ -22,7 +22,7 @@ const data = [
   },
 ];
 
-export default function SliderHome() {
+export const SliderHome = () => {
   return (
     <Box w="100%" h="30%" overflow="hidden">
       <Swiper
