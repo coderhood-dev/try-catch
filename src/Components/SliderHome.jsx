@@ -2,7 +2,7 @@ import React from "react";
 import SwiperCore, { Navigation, Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Image, Flex } from "@chakra-ui/react";
-import "../Styles/style.css";
+import "../Css/style.css";
 import "swiper/swiper.scss";
 import promo from "../Images/promo.jpg";
 import "swiper/components/navigation/navigation.scss";
@@ -44,7 +44,7 @@ export default function SliderHome() {
               alignItems="center"
               overflow="hidden"
             >
-              <Image h="43.75rem" w="100%" src={promo} />
+              <Image h="35rem" w="100%" src={promo} />
             </Flex>
           </SwiperSlide>
         ))}
