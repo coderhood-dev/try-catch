@@ -1,7 +1,10 @@
+import React from "react";
+import Router from "./Router";
+
 function App() {
   return (
     <div className="App">
-      <h1>Try Catch para el mundo!</h1>
+      <Router />
     </div>
   );
 }
