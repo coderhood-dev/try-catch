@@ -46,7 +46,7 @@ const data = [
   },
 ];
 
-export const DetailProduct =()=> {
+export const DetailScreen =()=> {
   return (
     <Flex>
       <Swiper
