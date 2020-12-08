@@ -49,7 +49,7 @@ const data = [
 
 export const DetailScreen=()=> {
   return (
-    <Flex>
+    <Flex width="60vh" align="center" justify="center" display="block" margin="auto">
       <Swiper
         spaceBetween={20}
         slidesPerView={3}
