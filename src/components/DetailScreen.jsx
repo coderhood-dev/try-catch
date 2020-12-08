@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import logo from "../Images/logo.jpg";
 import { Flex,Box } from "@chakra-ui/react"
 // Import Swiper styles
-import "../Css/Styles.css"
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
