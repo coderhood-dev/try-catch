@@ -2,9 +2,10 @@ import React from "react";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import logo from "../Images/logo.png";
+import logo from "../Images/logo.jpg";
 import { Flex,Box } from "@chakra-ui/react"
 // Import Swiper styles
+import "../Css/Styles.css"
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
@@ -46,7 +47,7 @@ const data = [
   },
 ];
 
-export const DetailScreen =()=> {
+export const DetailScreen=()=> {
   return (
     <Flex>
       <Swiper
