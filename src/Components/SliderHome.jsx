@@ -24,27 +24,27 @@ const data = [
 
 export const SliderHome = () => {
   return (
-    <Box w="100%" h="30%" overflow="hidden">
+    <Box width="100%"  height="60vh" overflow="hidden">
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
         overflow="hidden"
         navigation
-        pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={(swiper) => console.log("slide change")}
       >
         {data.map((user) => (
           <SwiperSlide>
             <Center
-              h="50vh"
-              w="100%"
               justifyContent="center"
               alignItems="center"
               overflow="hidden"
             >
-              <Image h="26rem" w="100%" src={promo}
-              objectFit="cover"
+              <Image src={promo}
+              // position="absolute"
+              width="100%"
+              height="30rem"
+              objectFit="full"
               display="block"
               margin="auto"
               />
