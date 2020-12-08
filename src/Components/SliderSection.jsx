@@ -49,7 +49,6 @@ export const SliderSection = () => {
         {data.map((user) => (
           <SwiperSlide key={user.id}>
             <Box mr="2rem" ml="2rem" textAlign="center">
-              {user.testimonial}
               <ProductCard />
             </Box>
           </SwiperSlide>
