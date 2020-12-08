@@ -59,7 +59,7 @@ export const DetailScreen=()=> {
       >
         {data.map((user) => (
           <SwiperSlide key={user.id}>
-            <Box>
+            <Box mr="2rem" ml="2rem" textAlign="center">
               {user.testimonial}
               <img src={logo} />
             </Box>
