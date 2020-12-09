@@ -1,6 +1,6 @@
 import { Flex, Text, Heading } from "@chakra-ui/react";
 
-export const SideBar = (data) => {
+export const SideBar = ({ data }) => {
   return (
     <Flex w="15rem" h="100vh" direction="column" boxShadow="xl">
       <Flex
@@ -13,7 +13,7 @@ export const SideBar = (data) => {
         <Heading ml="1rem">Categories</Heading>
       </Flex>
       <Flex direction="column" h="90%">
-        {data.map((categorieName) => (
+        {data.map(() => (
           <Flex
             w="100%"
             h="10%"
@@ -21,7 +21,7 @@ export const SideBar = (data) => {
             _hover={{ fontWeight: "bold", boxShadow: "base" }}
           >
             <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-              {categorieName}
+              {data.name}
             </Text>
           </Flex>
         ))}
