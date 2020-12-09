@@ -46,8 +46,8 @@ export const SliderSection = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={(swiper) => console.log("slide change")}
       >
-        {data.map((user) => (
-          <SwiperSlide key={user.id}>
+        {data.map((Products) => (
+          <SwiperSlide key={Products.id}>
             <Box mr="2rem" ml="2rem" textAlign="center">
               <ProductCard />
             </Box>
