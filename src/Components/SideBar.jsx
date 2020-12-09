@@ -13,16 +13,18 @@ export const SideBar = (data) => {
         <Heading ml="1rem">Categories</Heading>
       </Flex>
       <Flex direction="column" h="90%">
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            {data.categorieName}
-          </Text>
-        </Flex>
+        {data.map((categorieName) => (
+          <Flex
+            w="100%"
+            h="10%"
+            align="center"
+            _hover={{ fontWeight: "bold", boxShadow: "base" }}
+          >
+            <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
+              {categorieName}
+            </Text>
+          </Flex>
+        ))}
       </Flex>
     </Flex>
   );
