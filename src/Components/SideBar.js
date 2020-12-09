@@ -1,10 +1,13 @@
 import React from "react";
 
-export const Categories = ({ categories }) => {
+export const SideBar = ({ categories }) => {
   return (
     <div>
       <ul>
-        <li>Elemento 1</li>
+        {categories.map((el, index) => (
+          <li key={index}>{el.name}</li>
+        ))}
+
         <li>Elemento 2</li>
         <li>Elemento N</li>
       </ul>

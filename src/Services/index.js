@@ -16,3 +16,18 @@ export const fetchSearch = (keyWord) => {
     .then((response) => response.data)
     .catch((error) => error.message);
 };
+
+export const getProductByCategory = async (id_category) => {
+  const url = `productsByCategory/${id_category}`;
+  const params = {
+    country: "CO",
+    from: "0",
+  };
+  return API.get(url, {
+    params: {
+      ...params,
+    },
+  })
+    .then((response) => response.data.data.items)
+    .catch((error) => error);
+};
