@@ -1,6 +1,6 @@
 import { Flex, Text, Heading } from "@chakra-ui/react";
 
-export const SideBar = (categorieData) => {
+export const SideBar = (data) => {
   return (
     <Flex w="15rem" h="100vh" direction="column" boxShadow="xl">
       <Flex
@@ -20,107 +20,7 @@ export const SideBar = (categorieData) => {
           _hover={{ fontWeight: "bold", boxShadow: "base" }}
         >
           <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
-          </Text>
-        </Flex>
-        <Flex
-          w="100%"
-          h="10%"
-          align="center"
-          _hover={{ fontWeight: "bold", boxShadow: "base" }}
-        >
-          <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-            Categorie 1
+            {data.categorieName}
           </Text>
         </Flex>
       </Flex>
