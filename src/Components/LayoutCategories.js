@@ -1,10 +1,10 @@
 import React from "react";
-import { Categories } from "./Categories";
+import { SideBar } from "./SideBar";
 
 export const LayoutCategories = ({ children }) => {
   return (
     <div>
-      <Categories categories={[]} />
+      <SideBar categories={[]} />
       <div>{children}</div>
     </div>
   );

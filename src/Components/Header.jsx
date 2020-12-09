@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Flex,
-  Button,
-  Input,
-  IconButton,
-  Heading,
-} from "@chakra-ui/react";
+import { Flex, Button, Input, IconButton, Heading } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import { Icon } from "@chakra-ui/react";
 import { FaCartPlus, FaUser } from "react-icons/fa";
@@ -21,8 +15,8 @@ export const Header = () => {
       bg="#6748BC"
       bgColor="black"
     >
-      <Heading width="25%" size="lg" color="white">
-        Try-catch
+      <Heading width="25%" size="lg" color="Tomato">
+        Try catch
       </Heading>
       <Flex width="50%">
         <Input
@@ -48,4 +42,4 @@ export const Header = () => {
       <Button colorScheme="black" variant="ghost"></Button>
     </Flex>
   );
-}
+};

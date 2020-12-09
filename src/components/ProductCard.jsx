@@ -1,7 +1,8 @@
 import { Flex, Text, Image, Box, Button } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 
-export const ProductCard = ({ productImage, productTitle, productPrice }) => {
+export const ProductCard = ({ data }) => {
+  const { productImage } = data;
   return (
     <Box
       overflow="hidden"
@@ -51,7 +52,7 @@ export const ProductCard = ({ productImage, productTitle, productPrice }) => {
       >
         <Flex h="50%">
           <Text fontSize="xl" isTruncated="true">
-            {productTitle}
+            {""}
           </Text>
         </Flex>
 
@@ -63,7 +64,7 @@ export const ProductCard = ({ productImage, productTitle, productPrice }) => {
           height="50%"
         >
           <Flex justify="flex-start" width="50%">
-            <Text color="#ad172b">{productPrice}</Text>
+            <Text color="#ad172b">{""}</Text>
           </Flex>
 
           <Flex width="50%" justify="flex-end">
