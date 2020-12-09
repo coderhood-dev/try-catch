@@ -13,7 +13,7 @@ export const SideBar = ({ categories }) => {
         <Heading ml="1rem">Categories</Heading>
       </Flex>
       <Flex direction="column" h="90%">
-        {categories.map(() => (
+        {categories.map((category) => (
           <Flex
             w="100%"
             h="10%"
@@ -21,7 +21,7 @@ export const SideBar = ({ categories }) => {
             _hover={{ fontWeight: "bold", boxShadow: "base" }}
           >
             <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-              {categories.name}
+              {category.name}
             </Text>
           </Flex>
         ))}
