@@ -53,7 +53,8 @@ export const SliderSection = ({ Products }) => {
           {data.map((Product) => (
             <SwiperSlide key={Product}>
               <Box mr="2rem" ml="2rem" textAlign="center">
-                <ProductCard data={product.productElements} />
+                <ProductCard data={product.productElements} 
+                idCategory={"200002342"}/>
               </Box>
             </SwiperSlide>
           ))}
