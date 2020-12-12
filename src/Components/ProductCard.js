@@ -1,8 +1,10 @@
 import { Flex, Text, Image, Box, Button } from "@chakra-ui/react";
-import { Search2Icon } from "@chakra-ui/icons";
+import { Search2Icon, AddIcon } from "@chakra-ui/icons";
 
 export const ProductCard = ({ data }) => {
-  const { productImage } = data;
+  const productImage = data.image.imgUrl;
+  const productTitle = data.title.title;
+  const productPrice = data.price.sell_price.formatedAmount;
   return (
     <Box
       overflow="hidden"
@@ -10,7 +12,7 @@ export const ProductCard = ({ data }) => {
       align="center"
       direction="column"
       m="1rem"
-      w="16rem"
+      w="14rem"
       h="16rem"
       borderRadius="7px"
       bgColor="white"
@@ -23,7 +25,7 @@ export const ProductCard = ({ data }) => {
         borderRadius="100rem"
         bgColor="black"
         color="white"
-        pos="fixed"
+        pos="absolute"
         ml="5rem"
         mt="0.7rem"
         zIndex={10}
@@ -77,7 +79,7 @@ export const ProductCard = ({ data }) => {
               color="white"
               _hover={{ transform: "scale(1.1)" }}
             >
-              +
+              <AddIcon />
             </Button>
           </Flex>
         </Flex>
