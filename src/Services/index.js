@@ -1,5 +1,13 @@
 import API from "../API";
 
+const mock = async (data, time) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(data);
+    }, time * 1000);
+  });
+};
+
 export const fetchSearch = (keyWord) => {
   const url = "search";
   const params = {
@@ -29,5 +37,26 @@ export const getProductByCategory = async (id_category) => {
     },
   })
     .then((response) => response.data.data.items)
+    .catch((error) => error);
+};
+
+export const getCategories = async () => {
+  const url = `categories`;
+  return API.get(url)
+    .then((response) => response.data.categories)
+    .catch((error) => error);
+};
+
+export const getProductDetails = async (id_product) => {
+  const url = `product/${id_product}"`;
+  const params = {
+    language: "en",
+  };
+  return API.get(url, {
+    params: {
+      ...params,
+    },
+  })
+    .then((response) => response.data)
     .catch((error) => error);
 };
