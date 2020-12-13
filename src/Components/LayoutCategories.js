@@ -1,11 +1,12 @@
 import React from "react";
+import { Flex, Box } from "@chakra-ui/react";
 import { SideBar } from "./SideBar";
 
 export const LayoutCategories = ({ children }) => {
   return (
-    <div>
+    <Flex>
       <SideBar categories={[]} />
-      <div>{children}</div>
-    </div>
+      <Box p="1rem">{children}</Box>
+    </Flex>
   );
 };
