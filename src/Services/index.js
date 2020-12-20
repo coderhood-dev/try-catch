@@ -36,7 +36,7 @@ export const getProductByCategory = async (id_category) => {
       ...params,
     },
   })
-    .then((response) => response.data.data.items)
+    .then((response) => response.data)
     .catch((error) => error);
 };
 
