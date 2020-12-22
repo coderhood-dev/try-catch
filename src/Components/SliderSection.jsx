@@ -20,6 +20,7 @@ export const SliderSection = ({ idCategory, tileSection }) => {
       try {
         console.log("idCategory", idCategory);
         const prod = await getProductByCategory(idCategory);
+        console.log("prod", prod);
         if (prod.code !== 200) {
           setProducts([]);
           setLoading(false);
@@ -58,6 +59,7 @@ export const SliderSection = ({ idCategory, tileSection }) => {
               productImage: product.productElements.image.imgUrl,
               productTitle: product.productElements.title.title,
               productPrice: product.productElements.price.formatedAmount,
+              productId: product.productId,
             };
             return (
               <SwiperSlide key={index} tag="li" style={{ maxWidth: "15rem" }}>

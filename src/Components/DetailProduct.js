@@ -1,11 +1,11 @@
 import { Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import {} from "@chakra-ui/icons";
 import React, { useState } from "react";
 
-export const ProductDetail = ({ data }) => {
-  const photos = data.imageModule.imagePathLIst;
-  const title = data.titleModule.subject;
-  const price = data.priceModule.formatedPrice;
+export const DetailProduct = ({ detail }) => {
+  console.log(detail);
+  const photos = detail.imageModule.imagePathLIst || "";
+  const title = detail.titleModule.subject || "";
+  const price = detail.priceModule.formatedPrice || "";
 
   let [productImg, setState] = useState(photos[0]);
   return (

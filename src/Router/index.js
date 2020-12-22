@@ -6,12 +6,12 @@ import { CategoryResult } from "../Pages/CategoryResult";
 import { SearchResult } from "../Pages/SearchResult";
 import { DetailsProduct } from "../Pages/DetailsProduct";
 
-export default function App() {
+export default function Navegation() {
   return (
     <Router>
       <Header />
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/category/:idCategory" component={CategoryResult} />
         <Route path="/search/:keyWord" component={SearchResult} />
         <Route path="/details/:idProduct" component={DetailsProduct} />
