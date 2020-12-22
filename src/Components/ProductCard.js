@@ -1,9 +1,14 @@
 import { Flex, Text, Image, Box, Button } from "@chakra-ui/react";
 import { Search2Icon, AddIcon } from "@chakra-ui/icons";
+import { useHistory } from "react-router-dom";
 
 export const ProductCard = ({ product }) => {
-  const { productImage, productTitle, productPrice } = product;
-
+  let history = useHistory();
+  const { productImage, productTitle, productPrice, productId } = product;
+  const handleGetDetailsProduct = () => {
+    console.log(productId);
+    history.push(`/details/${productId}`);
+  };
   return (
     <Box
       overflow="hidden"
@@ -28,6 +33,7 @@ export const ProductCard = ({ product }) => {
         ml="5rem"
         mt="0.7rem"
         zIndex={10}
+        onClick={handleGetDetailsProduct}
       >
         <Search2Icon w={2} h={2} />
       </Button>

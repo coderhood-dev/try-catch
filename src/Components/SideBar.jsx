@@ -1,4 +1,5 @@
 import { Flex, Text, Heading } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export const SideBar = ({ categories }) => {
   return (
@@ -15,14 +16,17 @@ export const SideBar = ({ categories }) => {
       <Flex direction="column" h="90%">
         {categories.map((category) => (
           <Flex
+            key={category.id}
             w="100%"
             h="10%"
             align="center"
             _hover={{ fontWeight: "bold", boxShadow: "base" }}
           >
-            <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
-              {category.name}
-            </Text>
+            <Link to={`/category/${category.id}`}>
+              <Text ml="1rem" _hover={{ color: "tomato", cursor: "pointer" }}>
+                {category.name}
+              </Text>
+            </Link>
           </Flex>
         ))}
       </Flex>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Flex } from "@chakra-ui/react";
 import { LayoutCategories } from "../Components/LayoutCategories";
 import { useParams } from "react-router-dom";
 import { getProductByCategory } from "../Services";
@@ -6,27 +7,34 @@ import { ProductCard } from "../Components/ProductCard";
 
 export const CategoryResult = () => {
   const { idCategory } = useParams();
-  const [items, setProducts] = React.useState([]);
+  const [products, setProducts] = React.useState([]);
+  console.log("dento", idCategory);
 
   React.useEffect(() => {
-    const doFetchPosts = async () => {
+    const doFetchProducts = async () => {
       try {
-        const data = await getProductByCategory(idCategory);
-        setProducts(data);
+        const prod = await getProductByCategory(idCategory);
+        setProducts(prod.data.items);
       } catch (e) {
         setProducts([]);
       }
     };
-
-    doFetchPosts();
+    doFetchProducts();
   }, []);
 
   return (
     <LayoutCategories>
-      {items.map((prod) => {
-        const data = { productImage: prod.productElements.image.imgUrl };
-        return <ProductCard data={data} />;
-      })}
+      <Flex flexWrap="wrap">
+        {products.map((product, index) => {
+          const data = {
+            productImage: product.productElements.image.imgUrl,
+            productTitle: product.productElements.title.title,
+            productPrice: product.productElements.price.formatedAmount,
+            productId: product.productId,
+          };
+          return <ProductCard key={index} product={data} />;
+        })}
+      </Flex>
     </LayoutCategories>
   );
 };

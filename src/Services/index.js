@@ -1,4 +1,7 @@
 import API from "../API";
+import { productsData } from "../data/products";
+import { categoriesData } from "../data/categories";
+import { detailProductData } from "../data/detailProduct";
 
 const mock = async (data, time) => {
   return new Promise((resolve) => {
@@ -31,20 +34,26 @@ export const getProductByCategory = async (id_category) => {
     country: "CO",
     from: "0",
   };
-  return API.get(url, {
+  return mock(productsData, 1)
+    .then((response) => response)
+    .catch((error) => error);
+  /*API.get(url, {
     params: {
       ...params,
     },
   })
     .then((response) => response.data)
-    .catch((error) => error);
+    .catch((error) => error);*/
 };
 
 export const getCategories = async () => {
   const url = `categories`;
-  return API.get(url)
-    .then((response) => response.data.categories)
+  return mock(categoriesData, 1)
+    .then((response) => response)
     .catch((error) => error);
+  /*API.get(url)
+    .then((response) => response.data.categories)
+    .catch((error) => error);*/
 };
 
 export const getProductDetails = async (id_product) => {
@@ -52,11 +61,18 @@ export const getProductDetails = async (id_product) => {
   const params = {
     language: "en",
   };
-  return API.get(url, {
+  console.log("funcion");
+  return mock(detailProductData, 1)
+    .then((response) => {
+      console.log(response.detailProductData);
+      console.log("cdcdcd");
+    })
+    .catch((error) => error);
+  /*API.get(url, {
     params: {
       ...params,
     },
   })
     .then((response) => response.data)
-    .catch((error) => error);
+    .catch((error) => error);*/
 };
