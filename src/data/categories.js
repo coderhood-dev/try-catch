@@ -101,25 +101,5 @@ export const categoriesData = {
       id: "200000662",
       link: "//www.aliexpress.com/category/200000662/jackets-coats.html",
     },
-    {
-      name: "Pants",
-      id: "200118008",
-      link: "//www.aliexpress.com/category/200118008/pants.html",
-    },
-    {
-      name: "Shirts",
-      id: "200000668",
-      link: "//www.aliexpress.com/category/200000668/shirts.html",
-    },
-    {
-      name: "Jeans",
-      id: "100003086",
-      link: "//www.aliexpress.com/category/100003086/jeans.html",
-    },
-    {
-      name: "Sweaters",
-      id: "200000701",
-      link: "//www.aliexpress.com/category/200000701/sweaters.html",
-    },
   ],
 };

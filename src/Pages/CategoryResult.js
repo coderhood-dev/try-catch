@@ -24,7 +24,7 @@ export const CategoryResult = () => {
 
   return (
     <LayoutCategories>
-      <Flex flexWrap="wrap">
+      <Flex flexWrap="wrap" h="200vh">
         {products.map((product, index) => {
           const data = {
             productImage: product.productElements.image.imgUrl,
