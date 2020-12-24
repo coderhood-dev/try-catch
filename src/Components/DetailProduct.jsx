@@ -2,12 +2,19 @@ import { Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 export const DetailProduct = ({ detail }) => {
-  console.log(detail);
-  const photos = detail.imageModule.imagePathLIst || "";
-  const title = detail.titleModule.subject || "";
-  const price = detail.priceModule.formatedPrice || "";
+  const photos = [
+    "https://ae01.alicdn.com/kf/Hdc66c33e0cec42a499754aeb705744b0G/UP-Europe-T03A1-603XL-603-Refillable-Ink-Cartridge-with-ARC-Chip-for-Epson-Expression-XP-2100.jpg_50x50.jpg",
+    "https://ae01.alicdn.com/kf/H026f55432e204156a4e9a42425f7e820g/UP-Europe-T03A1-603XL-603-Refillable-Ink-Cartridge-with-ARC-Chip-for-Epson-Expression-XP-2100.jpg_50x50.jpg",
+    "https://ae01.alicdn.com/kf/Hbeb40ee9d7954d7e9db13286da8e7453I/UP-Europe-T03A1-603XL-603-Refillable-Ink-Cartridge-with-ARC-Chip-for-Epson-Expression-XP-2100.jpg_50x50.jpg",
+    "https://ae01.alicdn.com/kf/H957cf03dc2114f5c8e420b4f0924739br/UP-Europe-T03A1-603XL-603-Refillable-Ink-Cartridge-with-ARC-Chip-for-Epson-Expression-XP-2100.jpg_50x50.jpg",
+    "https://ae01.alicdn.com/kf/H06c2d7791a614d6e876c9c242cb5955e0/UP-Europe-T03A1-603XL-603-Refillable-Ink-Cartridge-with-ARC-Chip-for-Epson-Expression-XP-2100.jpg_50x50.jpg",
+    "https://ae01.alicdn.com/kf/H25c2af363c234639b9c082b63210298eS/UP-Europe-T03A1-603XL-603-Refillable-Ink-Cartridge-with-ARC-Chip-for-Epson-Expression-XP-2100.jpg_50x50.jpg",
+  ];
+  const title =
+    "UP Europe T03A1 603XL 603 Refillable Ink Cartridge with ARC Chip for Epson Expression XP-2100 XP-2105 XP-3100 XP-3105 Printer";
+  const price = 503.3;
 
-  let [productImg, setState] = useState(photos[0]);
+  let [productImg, setProductImg] = useState(photos[0]);
   return (
     <Flex
       border="1px solid #ededed"
@@ -26,8 +33,8 @@ export const DetailProduct = ({ detail }) => {
             mt="-1rem"
           >
             <Image
-              onClick={() => setState((productImg = photos[0]))}
-              src={photos[0].src}
+              onClick={() => setProductImg(photos[0])}
+              src={photos[0]}
               m="0.2"
               boxSize="6.3rem"
               align="center"
@@ -37,8 +44,8 @@ export const DetailProduct = ({ detail }) => {
               borderRadius="0.5rem"
             />
             <Image
-              onClick={() => setState((productImg = photos[1]))}
-              src={photos[1].src}
+              onClick={() => setProductImg(photos[1])}
+              src={photos[1]}
               m="0.2"
               boxSize="6.3rem"
               objectFit="cover"
@@ -48,8 +55,8 @@ export const DetailProduct = ({ detail }) => {
               borderRadius="0.5rem"
             />
             <Image
-              onClick={() => setState((productImg = photos[2]))}
-              src={photos[2].src}
+              onClick={() => setProductImg(photos[2])}
+              src={photos[2]}
               m="0.2"
               boxSize="6.3rem"
               objectFit="cover"
@@ -69,7 +76,7 @@ export const DetailProduct = ({ detail }) => {
             justify="center"
             align="center"
           >
-            <Image src={productImg.src} boxSize="25rem" objectFit="cover" />
+            <Image src={productImg} boxSize="25rem" objectFit="cover" />
           </Flex>
         </Flex>
         <Flex direction="column" w="30%" h="100%">
