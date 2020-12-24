@@ -58,7 +58,8 @@ export const SliderSection = ({ idCategory, tileSection }) => {
             const data = {
               productImage: product.productElements.image.imgUrl,
               productTitle: product.productElements.title.title,
-              productPrice: product.productElements.price.formatedAmount,
+              productPrice:
+                product.productElements.price.sell_price.formatedAmount,
               productId: product.productId,
             };
             return (
@@ -101,5 +102,5 @@ const ButtonNext = styled(Box)`
 const Title = styled(Heading)`
   margin-bottom: 1rem;
   margin-top: 1rem;
-  color: tomato;
+  color: #6ccacf;
 `;

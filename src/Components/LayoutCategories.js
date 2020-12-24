@@ -27,9 +27,11 @@ export const LayoutCategories = ({ children }) => {
   }, []);
 
   return (
-    <Flex>
+    <Flex w="100%" h="200vh" bgColor="#1a202c">
       <SideBar categories={categories} />
-      <Box p="1rem">{children}</Box>
+      <Box pl="1rem" w="85vw" minW="55rem" h="100vh">
+        {children}
+      </Box>
     </Flex>
   );
 };

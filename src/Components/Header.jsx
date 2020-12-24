@@ -1,5 +1,13 @@
 import React from "react";
-import { Flex, Button, Input, IconButton, Heading } from "@chakra-ui/react";
+import {
+  Flex,
+  Button,
+  Input,
+  IconButton,
+  Heading,
+  InputGroup,
+  InputRightAddon,
+} from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import { Icon } from "@chakra-ui/react";
 import { FaCartPlus, FaUser } from "react-icons/fa";
@@ -7,39 +15,70 @@ import { FaCartPlus, FaUser } from "react-icons/fa";
 export const Header = () => {
   return (
     <Flex
-      minH="2.5rem"
+      height="4.5rem"
+      w="100%"
       direction="row"
-      justify="space-between"
       align="center"
-      p="1rem 4rem"
-      bg="#6748BC"
-      bgColor="black"
+      bgColor="#1a202c"
     >
-      <Heading width="25%" size="lg" color="Tomato">
-        Try catch
-      </Heading>
-      <Flex width="50%">
+      <Flex width="25%" justify="center" align="center">
+        <Heading size="lg" color="#6ccacf">
+          Try catch
+        </Heading>
+      </Flex>
+      <Flex
+        width="50%"
+        h="50%"
+        bgColor="#2d3748"
+        borderRadius="1rem"
+        overflow="hidden"
+      >
         <Input
+          height="100%"
+          variant="unstyled"
           placeholder="Search products"
           size="lg"
-          bg="white"
+          bg="#2d3748"
           borderRadius="0rem"
         />
         <IconButton
-          height="100"
+          height="100%"
           color="#dbdbdb"
-          borderLeft="1px solid #dbdbdb"
-          bgColor="white"
+          bgColor="#2d3748"
           borderRadius="0rem"
           colorScheme="blue"
-          icon={<Search2Icon color="black" />}
+          icon={
+            <Search2Icon
+              color="
+          #a0aec0"
+            />
+          }
         />
       </Flex>
-      <Flex ml="2rem" width="25%" align="center" justifyContent="space-around">
-        <Icon as={FaUser} fontSize="1.6rem" color="white" />
-        <Icon as={FaCartPlus} fontSize="1.6rem" color="white" />
+      <Flex width="25%" justify="space-evenly">
+        <Icon
+          as={FaUser}
+          fontSize="1.4rem"
+          color="
+          #a0aec0"
+          _hover={{
+            transition: "0.1s",
+            transform: "scale(1.2)",
+            cursor: "pointer",
+          }}
+        />
+        <Icon
+          as={FaCartPlus}
+          fontSize="1.4rem"
+          color="
+          #a0aec0"
+          _hover={{
+            transition: "0.1s",
+            transform: "scale(1.2)",
+            cursor: "pointer",
+          }}
+        />
       </Flex>
-      <Button colorScheme="black" variant="ghost"></Button>
     </Flex>
   );
 };

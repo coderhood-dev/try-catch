@@ -16,22 +16,25 @@ export const ProductCard = ({ product }) => {
       align="center"
       direction="column"
       m="1rem"
-      w="14rem"
+      w="13rem"
       h="16rem"
       borderRadius="7px"
-      bgColor="white"
-      border="1px solid #ededed"
-      _hover={{ transition: "1s", cursor: "pointer", boxShadow: "lg" }}
+      bgColor="#2d3748"
+      _hover={{ transition: "0.2s", cursor: "pointer", boxShadow: "lg" }}
     >
       <Button
-        _hover={{ transform: "scale(1.1)", bgColor: "black" }}
+        _hover={{
+          transition: "0.1s",
+          transform: "scale(1.1)",
+          bgColor: "black",
+        }}
         size="sm"
         borderRadius="100rem"
-        bgColor="black"
-        color="white"
+        bgColor="#1a202c"
+        color="#6ccacf"
         pos="absolute"
-        ml="5rem"
-        mt="0.7rem"
+        ml="4.1rem"
+        mt="0.5rem"
         zIndex={10}
         onClick={handleGetDetailsProduct}
       >
@@ -44,7 +47,7 @@ export const ProductCard = ({ product }) => {
           alt="imagen no disponible"
           w="100%"
           h="100%"
-          _hover={{ transition: "0.7s", transform: "scale(1.1)" }}
+          _hover={{ transition: "0.2s", transform: "scale(1.05)" }}
         />
       </Flex>
 
@@ -58,7 +61,13 @@ export const ProductCard = ({ product }) => {
         borderTop="1px solid #ededed"
       >
         <Flex h="50%">
-          <Text fontSize="xl" isTruncated="true">
+          <Text
+            fontSize="sm"
+            mt="0.3rem"
+            isTruncated="true"
+            maxWidth="12.5rem"
+            color="#a0aec0"
+          >
             {productTitle}
           </Text>
         </Flex>
@@ -71,20 +80,24 @@ export const ProductCard = ({ product }) => {
           height="50%"
         >
           <Flex justify="flex-start" width="50%">
-            <Text color="#ad172b">{productPrice}</Text>
+            <Text color="#6ccacf">{productPrice}</Text>
           </Flex>
 
           <Flex width="50%" justify="flex-end">
             <Button
-              mr="0.9rem"
+              mr="0.5rem"
               size="sm"
               mb="0.5rem"
               borderRadius="100rem"
-              bgColor="black"
-              color="white"
-              _hover={{ transform: "scale(1.1)" }}
+              bgColor="#1a202c"
+              color="#6ccacf"
+              _hover={{
+                transition: "0.1s",
+                transform: "scale(1.1)",
+                bgColor: "black",
+              }}
             >
-              <AddIcon />
+              +
             </Button>
           </Flex>
         </Flex>
