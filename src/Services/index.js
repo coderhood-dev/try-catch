@@ -56,17 +56,13 @@ export const getCategories = async () => {
     .catch((error) => error);*/
 };
 
-export const getProductDetails = async (id_product) => {
+export const getProductInfo = async (id_product) => {
   const url = `product/${id_product}"`;
   const params = {
     language: "en",
   };
-  console.log("funcion");
   return mock(detailProductData, 1)
-    .then((response) => {
-      console.log(response.detailProductData);
-      console.log("cdcdcd");
-    })
+    .then((response) => response)
     .catch((error) => error);
   /*API.get(url, {
     params: {

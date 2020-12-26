@@ -2,7 +2,7 @@ import React from "react";
 import { Flex } from "@chakra-ui/react";
 import { LayoutCategories } from "../Components/LayoutCategories";
 import { DetailProduct } from "../Components/DetailProduct";
-import { getProductDetails } from "../Services";
+import { getProductInfo } from "../Services";
 import { useParams } from "react-router-dom";
 
 export const DetailsProduct = () => {
@@ -10,15 +10,11 @@ export const DetailsProduct = () => {
   const [detail, setDetail] = React.useState({});
   const [loading, setLoading] = React.useState(false);
 
-  console.log(idProduct);
-
   React.useEffect(() => {
     setLoading(true);
     const doGetDetail = async () => {
       try {
-        console.log("idCategory", idProduct);
-        const det = await getProductDetails(idProduct);
-        console.log("prod", det);
+        const det = await getProductInfo(idProduct);
         setDetail(det);
         setLoading(false);
       } catch (e) {
