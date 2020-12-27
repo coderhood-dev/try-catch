@@ -16,8 +16,8 @@ export const ProductCard = ({ product }) => {
       align="center"
       direction="column"
       m="1rem"
-      w="14rem"
-      h="16rem"
+      w="15rem"
+      h="20rem"
       borderRadius="7px"
       bgColor="white"
       border="1px solid #ededed"
@@ -57,8 +57,8 @@ export const ProductCard = ({ product }) => {
         alignItems="flex-start"
         borderTop="1px solid #ededed"
       >
-        <Flex h="50%">
-          <Text fontSize="xl" isTruncated="true">
+        <Flex h="50%" mt="0.6rem">
+          <Text isTruncated="true" maxW="13rem" fontSize="1rem">
             {productTitle}
           </Text>
         </Flex>
@@ -71,7 +71,9 @@ export const ProductCard = ({ product }) => {
           height="50%"
         >
           <Flex justify="flex-start" width="50%">
-            <Text color="#ad172b">{productPrice}</Text>
+            <Text color="tomato" fontSize="1.2rem" fontWeight="bold">
+              $ 354.00
+            </Text>
           </Flex>
 
           <Flex width="50%" justify="flex-end">
@@ -82,7 +84,11 @@ export const ProductCard = ({ product }) => {
               borderRadius="100rem"
               bgColor="black"
               color="white"
-              _hover={{ transform: "scale(1.1)" }}
+              _hover={{
+                transform: "scale(1.1)",
+                background: "tomato",
+                color: "#000",
+              }}
             >
               <AddIcon />
             </Button>

@@ -1,45 +1,56 @@
 import React from "react";
-import { Flex, Button, Input, IconButton, Heading } from "@chakra-ui/react";
-import { Search2Icon } from "@chakra-ui/icons";
+import {
+  Flex,
+  Button,
+  IconButton,
+  Input,
+  Heading,
+  InputGroup,
+  InputRightElement,
+  Box,
+} from "@chakra-ui/react";
+import { SearchIcon } from "@chakra-ui/icons";
 import { Icon } from "@chakra-ui/react";
-import { FaCartPlus, FaUser } from "react-icons/fa";
+import { FaCartPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
     <Flex
       minH="2.5rem"
-      direction="row"
       justify="space-between"
-      align="center"
       p="1rem 4rem"
       bg="#6748BC"
       bgColor="black"
     >
-      <Heading width="25%" size="lg" color="Tomato">
-        Try catch
-      </Heading>
-      <Flex width="50%">
-        <Input
-          placeholder="Search products"
-          size="lg"
-          bg="white"
-          borderRadius="0rem"
+      <Box w="10rem">
+        <Link to="/">
+          <Heading size="lg" color="tomato">
+            Try catch
+          </Heading>
+        </Link>
+      </Box>
+      <InputGroup w="30rem" bg="#fafafa" borderRadius="0.5rem">
+        <Input placeholder="Search products" />
+        <InputRightElement
+          children={
+            <IconButton
+              bg="tomato"
+              borderRadius="0 0.4rem 0.4rem 0"
+              aria-label="Search database"
+              icon={<SearchIcon color="#000" />}
+              fontSize="1.6rem"
+              color="white"
+            />
+          }
         />
-        <IconButton
-          height="100"
-          color="#dbdbdb"
-          borderLeft="1px solid #dbdbdb"
-          bgColor="white"
-          borderRadius="0rem"
-          colorScheme="blue"
-          icon={<Search2Icon color="black" />}
-        />
-      </Flex>
-      <Flex ml="2rem" width="25%" align="center" justifyContent="space-around">
-        <Icon as={FaUser} fontSize="1.6rem" color="white" />
-        <Icon as={FaCartPlus} fontSize="1.6rem" color="white" />
-      </Flex>
-      <Button colorScheme="black" variant="ghost"></Button>
+      </InputGroup>
+      <IconButton
+        bg="#000"
+        _hover={{ background: "tomato" }}
+        aria-label="Search database"
+        icon={<Icon as={FaCartPlus} fontSize="1.6rem" color="white" />}
+      />
     </Flex>
   );
 };

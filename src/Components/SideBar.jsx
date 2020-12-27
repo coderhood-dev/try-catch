@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const SideBar = ({ categories }) => {
   return (
-    <Flex w="15rem" h="100vh" direction="column" boxShadow="xl">
+    <Flex w="15rem" minW="15rem" h="100vh" direction="column" boxShadow="xl">
       <Flex
         h="10%"
         w="100%"
