@@ -1,9 +1,10 @@
 import React from "react";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import { LayoutCategories } from "../Components/LayoutCategories";
 import { DetailProduct } from "../Components/DetailProduct";
 import { getProductInfo } from "../Services";
 import { useParams } from "react-router-dom";
+import { SliderSection } from "../Components/SliderSection";
 
 export const DetailsProduct = () => {
   const { idProduct } = useParams();
@@ -26,8 +27,16 @@ export const DetailsProduct = () => {
 
   return (
     <LayoutCategories>
-      <Flex>
-        <DetailProduct detail={detail} />
+      <Flex flexDirection="column">
+        <Flex justifyContent="center">
+          <DetailProduct detail={detail} />
+        </Flex>
+        <Box mt="5rem">
+          <SliderSection
+            idCategory="200001648"
+            tileSection="Blouses & Shirts"
+          />
+        </Box>
       </Flex>
     </LayoutCategories>
   );

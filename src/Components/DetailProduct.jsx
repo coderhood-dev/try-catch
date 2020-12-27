@@ -10,8 +10,7 @@ export const DetailProduct = ({ detail }) => {
     "https://ae01.alicdn.com/kf/H06c2d7791a614d6e876c9c242cb5955e0/UP-Europe-T03A1-603XL-603-Refillable-Ink-Cartridge-with-ARC-Chip-for-Epson-Expression-XP-2100.jpg_50x50.jpg",
     "https://ae01.alicdn.com/kf/H25c2af363c234639b9c082b63210298eS/UP-Europe-T03A1-603XL-603-Refillable-Ink-Cartridge-with-ARC-Chip-for-Epson-Expression-XP-2100.jpg_50x50.jpg",
   ];
-  const title =
-    "UP Europe T03A1 603XL 603 Refillable Ink Cartridge with ARC Chip for Epson Expression XP-2100 XP-2105 XP-3100 XP-3105 Printer";
+  const title = "UP Europe T03A1 603XL 603 Refillable Ink Cartridge";
   const price = 503.3;
 
   let [productImg, setProductImg] = useState(photos[0]);
@@ -80,12 +79,20 @@ export const DetailProduct = ({ detail }) => {
           </Flex>
         </Flex>
         <Flex direction="column" w="30%" h="100%">
-          <Heading color="black">{title}</Heading>
-          <Flex direction="row" justify="space-around" align="center" w="100%">
-            <Text fontSize="1.5rem" mr="1rem">
-              {price}
+          <Heading color="black" fontSize="1.5rem" mt="2rem" mb="2rem">
+            {title}
+          </Heading>
+          <Flex
+            justifyContent="space-between"
+            alignItems="center"
+            w="100%"
+            mb="1rem"
+            p="0.7rem"
+          >
+            <Text fontSize="1.5rem">{`$ ${price}`}</Text>
+            <Text ml="1rem" fontWeight="bold" fontSize="0.9rem" color="tomato">
+              Envio gratis
             </Text>
-            <Text ml="1rem">envio gratis</Text>
           </Flex>
 
           <Button
@@ -103,15 +110,15 @@ export const DetailProduct = ({ detail }) => {
             bgColor="black"
             color="white"
             w="7rem"
-            h="4rem"
+            h="2rem"
           >
-            comprar ahora
+            Comprar
           </Button>
         </Flex>
       </Flex>
       <Flex direction="column" p="1rem" justify="center" align="center" h="25%">
-        <Heading>Description</Heading>
-        <Text>
+        <Heading mb="1rem">Description</Heading>
+        <Text mb="1rem">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Necessitatibus libero modi ipsa. Illum sint exercitationem enim
           repellendus officia praesentium pariatur repudiandae, doloribus eaque
